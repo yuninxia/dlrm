@@ -1,0 +1,3 @@
+[submodule "workloads/training"]
+	path = workloads/training
+	url = https://github.com/mlcommons/training.git
