@@ -1,0 +1,2 @@
+CUDA_VISIBLE_DEVICES=0 hpcrun -a python -e CYCLES@f300 -e gpu=nvidia,pc -t \
+    python dlrm.py
