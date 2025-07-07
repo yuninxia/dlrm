@@ -21,4 +21,7 @@ pip install torchrec --index-url https://download.pytorch.org/whl/cu124
 # profiling
 source /home/ynxia/playground/hpctoolkit/setup_hpctoolkit.sh
 hpcstruct --gpucf yes -j 64 --psize 20000000 ./hpctoolkit-python3.11-measurements/
+
+## analysis
+pip install git+https://github.com/LLNL/hatchet.git@releases/2025.1.0
 ```
