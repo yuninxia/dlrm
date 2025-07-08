@@ -210,6 +210,21 @@ inputs:
     scope: function
     formula: $$
     combine: sum
+  - &GXCOPYx3a_A2Ax20_x28_Bx29_-sum-x5b_0x0x5d_-execution
+    metric: GXCOPY:A2A (B)
+    scope: execution
+    formula: $$
+    combine: sum
+  - &GXCOPYx3a_A2Ax20_x28_Bx29_-sum-x5b_0x0x5d_-lex_aware
+    metric: GXCOPY:A2A (B)
+    scope: lex_aware
+    formula: $$
+    combine: sum
+  - &GXCOPYx3a_A2Ax20_x28_Bx29_-sum-x5b_0x0x5d_-function
+    metric: GXCOPY:A2A (B)
+    scope: function
+    formula: $$
+    combine: sum
   - &GINSx3a_STL_OTHR-sum-x5b_0x0x5d_-execution
     metric: GINS:STL_OTHR
     scope: execution
@@ -267,21 +282,6 @@ inputs:
     combine: sum
   - &GICOPYx20_x28_secx29_-sum-x5b_0x0x5d_-function
     metric: GICOPY (sec)
-    scope: function
-    formula: $$
-    combine: sum
-  - &GPUOPx20_x28_secx29_-sum-x5b_0x0x5d_-execution
-    metric: GPUOP (sec)
-    scope: execution
-    formula: $$
-    combine: sum
-  - &GPUOPx20_x28_secx29_-sum-x5b_0x0x5d_-lex_aware
-    metric: GPUOP (sec)
-    scope: lex_aware
-    formula: $$
-    combine: sum
-  - &GPUOPx20_x28_secx29_-sum-x5b_0x0x5d_-function
-    metric: GPUOP (sec)
     scope: function
     formula: $$
     combine: sum
@@ -390,183 +390,63 @@ inputs:
     scope: function
     formula: $$
     combine: sum
-  - &GSYNCx3a_EVTx20_x28_secx29_-sum-x5b_0x0x5d_-execution
-    metric: GSYNC:EVT (sec)
+  - &GINSx3a_STL_MTHR-sum-x5b_0x0x5d_-execution
+    metric: GINS:STL_MTHR
     scope: execution
     formula: $$
     combine: sum
-  - &GSYNCx3a_EVTx20_x28_secx29_-sum-x5b_0x0x5d_-lex_aware
-    metric: GSYNC:EVT (sec)
+  - &GINSx3a_STL_MTHR-sum-x5b_0x0x5d_-lex_aware
+    metric: GINS:STL_MTHR
     scope: lex_aware
     formula: $$
     combine: sum
-  - &GSYNCx3a_EVTx20_x28_secx29_-sum-x5b_0x0x5d_-function
-    metric: GSYNC:EVT (sec)
+  - &GINSx3a_STL_MTHR-sum-x5b_0x0x5d_-function
+    metric: GINS:STL_MTHR
     scope: function
     formula: $$
     combine: sum
-  - &GMEMx3a_PAGx20_x28_Bx29_-sum-x5b_0x0x5d_-execution
-    metric: GMEM:PAG (B)
+  - &GINSx3a_STL_NONE-sum-x5b_0x0x5d_-execution
+    metric: GINS:STL_NONE
     scope: execution
     formula: $$
     combine: sum
-  - &GMEMx3a_PAGx20_x28_Bx29_-sum-x5b_0x0x5d_-lex_aware
-    metric: GMEM:PAG (B)
+  - &GINSx3a_STL_NONE-sum-x5b_0x0x5d_-lex_aware
+    metric: GINS:STL_NONE
     scope: lex_aware
     formula: $$
     combine: sum
-  - &GMEMx3a_PAGx20_x28_Bx29_-sum-x5b_0x0x5d_-function
-    metric: GMEM:PAG (B)
+  - &GINSx3a_STL_NONE-sum-x5b_0x0x5d_-function
+    metric: GINS:STL_NONE
     scope: function
     formula: $$
     combine: sum
-  - &GINSx3a_SIMD_SLS-sum-x5b_0x0x5d_-execution
-    metric: GINS:SIMD_SLS
+  - &GMEMx3a_MSTx20_x28_Bx29_-sum-x5b_0x0x5d_-execution
+    metric: GMEM:MST (B)
     scope: execution
     formula: $$
     combine: sum
-  - &GINSx3a_SIMD_SLS-sum-x5b_0x0x5d_-lex_aware
-    metric: GINS:SIMD_SLS
+  - &GMEMx3a_MSTx20_x28_Bx29_-sum-x5b_0x0x5d_-lex_aware
+    metric: GMEM:MST (B)
     scope: lex_aware
     formula: $$
     combine: sum
-  - &GINSx3a_SIMD_SLS-sum-x5b_0x0x5d_-function
-    metric: GINS:SIMD_SLS
+  - &GMEMx3a_MSTx20_x28_Bx29_-sum-x5b_0x0x5d_-function
+    metric: GMEM:MST (B)
     scope: function
     formula: $$
     combine: sum
-  - &GKERx3a_BLK_THR_ACUMU-sum-x5b_0x0x5d_-execution
-    metric: GKER:BLK_THR_ACUMU
+  - &GMSETx3a_MANx20_x28_Bx29_-sum-x5b_0x0x5d_-execution
+    metric: GMSET:MAN (B)
     scope: execution
     formula: $$
     combine: sum
-  - &GKERx3a_BLK_THR_ACUMU-sum-x5b_0x0x5d_-lex_aware
-    metric: GKER:BLK_THR_ACUMU
+  - &GMSETx3a_MANx20_x28_Bx29_-sum-x5b_0x0x5d_-lex_aware
+    metric: GMSET:MAN (B)
     scope: lex_aware
     formula: $$
     combine: sum
-  - &GKERx3a_BLK_THR_ACUMU-sum-x5b_0x0x5d_-function
-    metric: GKER:BLK_THR_ACUMU
-    scope: function
-    formula: $$
-    combine: sum
-  - &GINSx3a_STL_IFET-sum-x5b_0x0x5d_-execution
-    metric: GINS:STL_IFET
-    scope: execution
-    formula: $$
-    combine: sum
-  - &GINSx3a_STL_IFET-sum-x5b_0x0x5d_-lex_aware
-    metric: GINS:STL_IFET
-    scope: lex_aware
-    formula: $$
-    combine: sum
-  - &GINSx3a_STL_IFET-sum-x5b_0x0x5d_-function
-    metric: GINS:STL_IFET
-    scope: function
-    formula: $$
-    combine: sum
-  - &GINSx3a_LAT_UCV-sum-x5b_0x0x5d_-execution
-    metric: GINS:LAT_UCV
-    scope: execution
-    formula: $$
-    combine: sum
-  - &GINSx3a_LAT_UCV-sum-x5b_0x0x5d_-lex_aware
-    metric: GINS:LAT_UCV
-    scope: lex_aware
-    formula: $$
-    combine: sum
-  - &GINSx3a_LAT_UCV-sum-x5b_0x0x5d_-function
-    metric: GINS:LAT_UCV
-    scope: function
-    formula: $$
-    combine: sum
-  - &GINSx3a_SIMD_TOT-sum-x5b_0x0x5d_-execution
-    metric: GINS:SIMD_TOT
-    scope: execution
-    formula: $$
-    combine: sum
-  - &GINSx3a_SIMD_TOT-sum-x5b_0x0x5d_-lex_aware
-    metric: GINS:SIMD_TOT
-    scope: lex_aware
-    formula: $$
-    combine: sum
-  - &GINSx3a_SIMD_TOT-sum-x5b_0x0x5d_-function
-    metric: GINS:SIMD_TOT
-    scope: function
-    formula: $$
-    combine: sum
-  - &GXCOPYx3a_COUNT-sum-x5b_0x0x5d_-execution
-    metric: GXCOPY:COUNT
-    scope: execution
-    formula: $$
-    combine: sum
-  - &GXCOPYx3a_COUNT-sum-x5b_0x0x5d_-lex_aware
-    metric: GXCOPY:COUNT
-    scope: lex_aware
-    formula: $$
-    combine: sum
-  - &GXCOPYx3a_COUNT-sum-x5b_0x0x5d_-function
-    metric: GXCOPY:COUNT
-    scope: function
-    formula: $$
-    combine: sum
-  - &GXCOPYx3a_H2Dx20_x28_Bx29_-sum-x5b_0x0x5d_-execution
-    metric: GXCOPY:H2D (B)
-    scope: execution
-    formula: $$
-    combine: sum
-  - &GXCOPYx3a_H2Dx20_x28_Bx29_-sum-x5b_0x0x5d_-lex_aware
-    metric: GXCOPY:H2D (B)
-    scope: lex_aware
-    formula: $$
-    combine: sum
-  - &GXCOPYx3a_H2Dx20_x28_Bx29_-sum-x5b_0x0x5d_-function
-    metric: GXCOPY:H2D (B)
-    scope: function
-    formula: $$
-    combine: sum
-  - &GINSx3a_SIMD_ACT-sum-x5b_0x0x5d_-execution
-    metric: GINS:SIMD_ACT
-    scope: execution
-    formula: $$
-    combine: sum
-  - &GINSx3a_SIMD_ACT-sum-x5b_0x0x5d_-lex_aware
-    metric: GINS:SIMD_ACT
-    scope: lex_aware
-    formula: $$
-    combine: sum
-  - &GINSx3a_SIMD_ACT-sum-x5b_0x0x5d_-function
-    metric: GINS:SIMD_ACT
-    scope: function
-    formula: $$
-    combine: sum
-  - &GKERx3a_THR_REG_ACUMU-sum-x5b_0x0x5d_-execution
-    metric: GKER:THR_REG_ACUMU
-    scope: execution
-    formula: $$
-    combine: sum
-  - &GKERx3a_THR_REG_ACUMU-sum-x5b_0x0x5d_-lex_aware
-    metric: GKER:THR_REG_ACUMU
-    scope: lex_aware
-    formula: $$
-    combine: sum
-  - &GKERx3a_THR_REG_ACUMU-sum-x5b_0x0x5d_-function
-    metric: GKER:THR_REG_ACUMU
-    scope: function
-    formula: $$
-    combine: sum
-  - &GKERx20_x28_secx29_-sum-x5b_0x0x5d_-execution
-    metric: GKER (sec)
-    scope: execution
-    formula: $$
-    combine: sum
-  - &GKERx20_x28_secx29_-sum-x5b_0x0x5d_-lex_aware
-    metric: GKER (sec)
-    scope: lex_aware
-    formula: $$
-    combine: sum
-  - &GKERx20_x28_secx29_-sum-x5b_0x0x5d_-function
-    metric: GKER (sec)
+  - &GMSETx3a_MANx20_x28_Bx29_-sum-x5b_0x0x5d_-function
+    metric: GMSET:MAN (B)
     scope: function
     formula: $$
     combine: sum
@@ -597,141 +477,6 @@ inputs:
     combine: sum
   - &GINSx3a_STL_ANY-sum-x5b_0x0x5d_-function
     metric: GINS:STL_ANY
-    scope: function
-    formula: $$
-    combine: sum
-  - &GINSx3a_STL_CMEM-sum-x5b_0x0x5d_-execution
-    metric: GINS:STL_CMEM
-    scope: execution
-    formula: $$
-    combine: sum
-  - &GINSx3a_STL_CMEM-sum-x5b_0x0x5d_-lex_aware
-    metric: GINS:STL_CMEM
-    scope: lex_aware
-    formula: $$
-    combine: sum
-  - &GINSx3a_STL_CMEM-sum-x5b_0x0x5d_-function
-    metric: GINS:STL_CMEM
-    scope: function
-    formula: $$
-    combine: sum
-  - &GINSx3a_BLK_LAT-sum-x5b_0x0x5d_-execution
-    metric: GINS:BLK_LAT
-    scope: execution
-    formula: $$
-    combine: sum
-  - &GINSx3a_BLK_LAT-sum-x5b_0x0x5d_-lex_aware
-    metric: GINS:BLK_LAT
-    scope: lex_aware
-    formula: $$
-    combine: sum
-  - &GINSx3a_BLK_LAT-sum-x5b_0x0x5d_-function
-    metric: GINS:BLK_LAT
-    scope: function
-    formula: $$
-    combine: sum
-  - &GMSETx3a_DSTx20_x28_Bx29_-sum-x5b_0x0x5d_-execution
-    metric: GMSET:DST (B)
-    scope: execution
-    formula: $$
-    combine: sum
-  - &GMSETx3a_DSTx20_x28_Bx29_-sum-x5b_0x0x5d_-lex_aware
-    metric: GMSET:DST (B)
-    scope: lex_aware
-    formula: $$
-    combine: sum
-  - &GMSETx3a_DSTx20_x28_Bx29_-sum-x5b_0x0x5d_-function
-    metric: GMSET:DST (B)
-    scope: function
-    formula: $$
-    combine: sum
-  - &GINSx3a_BLK_SIMD_ACT-sum-x5b_0x0x5d_-execution
-    metric: GINS:BLK_SIMD_ACT
-    scope: execution
-    formula: $$
-    combine: sum
-  - &GINSx3a_BLK_SIMD_ACT-sum-x5b_0x0x5d_-lex_aware
-    metric: GINS:BLK_SIMD_ACT
-    scope: lex_aware
-    formula: $$
-    combine: sum
-  - &GINSx3a_BLK_SIMD_ACT-sum-x5b_0x0x5d_-function
-    metric: GINS:BLK_SIMD_ACT
-    scope: function
-    formula: $$
-    combine: sum
-  - &GXCOPYx3a_A2Ax20_x28_Bx29_-sum-x5b_0x0x5d_-execution
-    metric: GXCOPY:A2A (B)
-    scope: execution
-    formula: $$
-    combine: sum
-  - &GXCOPYx3a_A2Ax20_x28_Bx29_-sum-x5b_0x0x5d_-lex_aware
-    metric: GXCOPY:A2A (B)
-    scope: lex_aware
-    formula: $$
-    combine: sum
-  - &GXCOPYx3a_A2Ax20_x28_Bx29_-sum-x5b_0x0x5d_-function
-    metric: GXCOPY:A2A (B)
-    scope: function
-    formula: $$
-    combine: sum
-  - &GINS-sum-x5b_0x0x5d_-execution
-    metric: GINS
-    scope: execution
-    formula: $$
-    combine: sum
-  - &GINS-sum-x5b_0x0x5d_-lex_aware
-    metric: GINS
-    scope: lex_aware
-    formula: $$
-    combine: sum
-  - &GINS-sum-x5b_0x0x5d_-function
-    metric: GINS
-    scope: function
-    formula: $$
-    combine: sum
-  - &GINSx3a_STL_PIPE-sum-x5b_0x0x5d_-execution
-    metric: GINS:STL_PIPE
-    scope: execution
-    formula: $$
-    combine: sum
-  - &GINSx3a_STL_PIPE-sum-x5b_0x0x5d_-lex_aware
-    metric: GINS:STL_PIPE
-    scope: lex_aware
-    formula: $$
-    combine: sum
-  - &GINSx3a_STL_PIPE-sum-x5b_0x0x5d_-function
-    metric: GINS:STL_PIPE
-    scope: function
-    formula: $$
-    combine: sum
-  - &GMEMx3a_ARYx20_x28_Bx29_-sum-x5b_0x0x5d_-execution
-    metric: GMEM:ARY (B)
-    scope: execution
-    formula: $$
-    combine: sum
-  - &GMEMx3a_ARYx20_x28_Bx29_-sum-x5b_0x0x5d_-lex_aware
-    metric: GMEM:ARY (B)
-    scope: lex_aware
-    formula: $$
-    combine: sum
-  - &GMEMx3a_ARYx20_x28_Bx29_-sum-x5b_0x0x5d_-function
-    metric: GMEM:ARY (B)
-    scope: function
-    formula: $$
-    combine: sum
-  - &GINSx3a_LAT-sum-x5b_0x0x5d_-execution
-    metric: GINS:LAT
-    scope: execution
-    formula: $$
-    combine: sum
-  - &GINSx3a_LAT-sum-x5b_0x0x5d_-lex_aware
-    metric: GINS:LAT
-    scope: lex_aware
-    formula: $$
-    combine: sum
-  - &GINSx3a_LAT-sum-x5b_0x0x5d_-function
-    metric: GINS:LAT
     scope: function
     formula: $$
     combine: sum
@@ -795,63 +540,333 @@ inputs:
     scope: function
     formula: $$
     combine: sum
-  - &GINSx3a_STL_MTHR-sum-x5b_0x0x5d_-execution
-    metric: GINS:STL_MTHR
+  - &GINSx3a_SIMD_TOT-sum-x5b_0x0x5d_-execution
+    metric: GINS:SIMD_TOT
     scope: execution
     formula: $$
     combine: sum
-  - &GINSx3a_STL_MTHR-sum-x5b_0x0x5d_-lex_aware
-    metric: GINS:STL_MTHR
+  - &GINSx3a_SIMD_TOT-sum-x5b_0x0x5d_-lex_aware
+    metric: GINS:SIMD_TOT
     scope: lex_aware
     formula: $$
     combine: sum
-  - &GINSx3a_STL_MTHR-sum-x5b_0x0x5d_-function
-    metric: GINS:STL_MTHR
+  - &GINSx3a_SIMD_TOT-sum-x5b_0x0x5d_-function
+    metric: GINS:SIMD_TOT
     scope: function
     formula: $$
     combine: sum
-  - &GINSx3a_STL_NONE-sum-x5b_0x0x5d_-execution
-    metric: GINS:STL_NONE
+  - &GKERx3a_BLK_THR_ACUMU-sum-x5b_0x0x5d_-execution
+    metric: GKER:BLK_THR_ACUMU
     scope: execution
     formula: $$
     combine: sum
-  - &GINSx3a_STL_NONE-sum-x5b_0x0x5d_-lex_aware
-    metric: GINS:STL_NONE
+  - &GKERx3a_BLK_THR_ACUMU-sum-x5b_0x0x5d_-lex_aware
+    metric: GKER:BLK_THR_ACUMU
     scope: lex_aware
     formula: $$
     combine: sum
-  - &GINSx3a_STL_NONE-sum-x5b_0x0x5d_-function
-    metric: GINS:STL_NONE
+  - &GKERx3a_BLK_THR_ACUMU-sum-x5b_0x0x5d_-function
+    metric: GKER:BLK_THR_ACUMU
     scope: function
     formula: $$
     combine: sum
-  - &GMEMx3a_MSTx20_x28_Bx29_-sum-x5b_0x0x5d_-execution
-    metric: GMEM:MST (B)
+  - &GINSx3a_STL_IFET-sum-x5b_0x0x5d_-execution
+    metric: GINS:STL_IFET
     scope: execution
     formula: $$
     combine: sum
-  - &GMEMx3a_MSTx20_x28_Bx29_-sum-x5b_0x0x5d_-lex_aware
-    metric: GMEM:MST (B)
+  - &GINSx3a_STL_IFET-sum-x5b_0x0x5d_-lex_aware
+    metric: GINS:STL_IFET
     scope: lex_aware
     formula: $$
     combine: sum
-  - &GMEMx3a_MSTx20_x28_Bx29_-sum-x5b_0x0x5d_-function
-    metric: GMEM:MST (B)
+  - &GINSx3a_STL_IFET-sum-x5b_0x0x5d_-function
+    metric: GINS:STL_IFET
     scope: function
     formula: $$
     combine: sum
-  - &GMSETx3a_MANx20_x28_Bx29_-sum-x5b_0x0x5d_-execution
-    metric: GMSET:MAN (B)
+  - &GINSx3a_LAT_UCV-sum-x5b_0x0x5d_-execution
+    metric: GINS:LAT_UCV
     scope: execution
     formula: $$
     combine: sum
-  - &GMSETx3a_MANx20_x28_Bx29_-sum-x5b_0x0x5d_-lex_aware
-    metric: GMSET:MAN (B)
+  - &GINSx3a_LAT_UCV-sum-x5b_0x0x5d_-lex_aware
+    metric: GINS:LAT_UCV
     scope: lex_aware
     formula: $$
     combine: sum
-  - &GMSETx3a_MANx20_x28_Bx29_-sum-x5b_0x0x5d_-function
-    metric: GMSET:MAN (B)
+  - &GINSx3a_LAT_UCV-sum-x5b_0x0x5d_-function
+    metric: GINS:LAT_UCV
+    scope: function
+    formula: $$
+    combine: sum
+  - &GXCOPYx3a_COUNT-sum-x5b_0x0x5d_-execution
+    metric: GXCOPY:COUNT
+    scope: execution
+    formula: $$
+    combine: sum
+  - &GXCOPYx3a_COUNT-sum-x5b_0x0x5d_-lex_aware
+    metric: GXCOPY:COUNT
+    scope: lex_aware
+    formula: $$
+    combine: sum
+  - &GXCOPYx3a_COUNT-sum-x5b_0x0x5d_-function
+    metric: GXCOPY:COUNT
+    scope: function
+    formula: $$
+    combine: sum
+  - &GXCOPYx3a_H2Dx20_x28_Bx29_-sum-x5b_0x0x5d_-execution
+    metric: GXCOPY:H2D (B)
+    scope: execution
+    formula: $$
+    combine: sum
+  - &GXCOPYx3a_H2Dx20_x28_Bx29_-sum-x5b_0x0x5d_-lex_aware
+    metric: GXCOPY:H2D (B)
+    scope: lex_aware
+    formula: $$
+    combine: sum
+  - &GXCOPYx3a_H2Dx20_x28_Bx29_-sum-x5b_0x0x5d_-function
+    metric: GXCOPY:H2D (B)
+    scope: function
+    formula: $$
+    combine: sum
+  - &GSYNCx3a_EVTx20_x28_secx29_-sum-x5b_0x0x5d_-execution
+    metric: GSYNC:EVT (sec)
+    scope: execution
+    formula: $$
+    combine: sum
+  - &GSYNCx3a_EVTx20_x28_secx29_-sum-x5b_0x0x5d_-lex_aware
+    metric: GSYNC:EVT (sec)
+    scope: lex_aware
+    formula: $$
+    combine: sum
+  - &GSYNCx3a_EVTx20_x28_secx29_-sum-x5b_0x0x5d_-function
+    metric: GSYNC:EVT (sec)
+    scope: function
+    formula: $$
+    combine: sum
+  - &CPUTIMEx20_x28_secx29_-sum-x5b_0x0x5d_-execution
+    metric: CPUTIME (sec)
+    scope: execution
+    formula: $$
+    combine: sum
+  - &CPUTIMEx20_x28_secx29_-sum-x5b_0x0x5d_-lex_aware
+    metric: CPUTIME (sec)
+    scope: lex_aware
+    formula: $$
+    combine: sum
+  - &CPUTIMEx20_x28_secx29_-sum-x5b_0x0x5d_-function
+    metric: CPUTIME (sec)
+    scope: function
+    formula: $$
+    combine: sum
+  - &GMEMx3a_PAGx20_x28_Bx29_-sum-x5b_0x0x5d_-execution
+    metric: GMEM:PAG (B)
+    scope: execution
+    formula: $$
+    combine: sum
+  - &GMEMx3a_PAGx20_x28_Bx29_-sum-x5b_0x0x5d_-lex_aware
+    metric: GMEM:PAG (B)
+    scope: lex_aware
+    formula: $$
+    combine: sum
+  - &GMEMx3a_PAGx20_x28_Bx29_-sum-x5b_0x0x5d_-function
+    metric: GMEM:PAG (B)
+    scope: function
+    formula: $$
+    combine: sum
+  - &GINSx3a_SIMD_SLS-sum-x5b_0x0x5d_-execution
+    metric: GINS:SIMD_SLS
+    scope: execution
+    formula: $$
+    combine: sum
+  - &GINSx3a_SIMD_SLS-sum-x5b_0x0x5d_-lex_aware
+    metric: GINS:SIMD_SLS
+    scope: lex_aware
+    formula: $$
+    combine: sum
+  - &GINSx3a_SIMD_SLS-sum-x5b_0x0x5d_-function
+    metric: GINS:SIMD_SLS
+    scope: function
+    formula: $$
+    combine: sum
+  - &GINSx3a_SIMD_ACT-sum-x5b_0x0x5d_-execution
+    metric: GINS:SIMD_ACT
+    scope: execution
+    formula: $$
+    combine: sum
+  - &GINSx3a_SIMD_ACT-sum-x5b_0x0x5d_-lex_aware
+    metric: GINS:SIMD_ACT
+    scope: lex_aware
+    formula: $$
+    combine: sum
+  - &GINSx3a_SIMD_ACT-sum-x5b_0x0x5d_-function
+    metric: GINS:SIMD_ACT
+    scope: function
+    formula: $$
+    combine: sum
+  - &GKERx3a_THR_REG_ACUMU-sum-x5b_0x0x5d_-execution
+    metric: GKER:THR_REG_ACUMU
+    scope: execution
+    formula: $$
+    combine: sum
+  - &GKERx3a_THR_REG_ACUMU-sum-x5b_0x0x5d_-lex_aware
+    metric: GKER:THR_REG_ACUMU
+    scope: lex_aware
+    formula: $$
+    combine: sum
+  - &GKERx3a_THR_REG_ACUMU-sum-x5b_0x0x5d_-function
+    metric: GKER:THR_REG_ACUMU
+    scope: function
+    formula: $$
+    combine: sum
+  - &GKERx20_x28_secx29_-sum-x5b_0x0x5d_-execution
+    metric: GKER (sec)
+    scope: execution
+    formula: $$
+    combine: sum
+  - &GKERx20_x28_secx29_-sum-x5b_0x0x5d_-lex_aware
+    metric: GKER (sec)
+    scope: lex_aware
+    formula: $$
+    combine: sum
+  - &GKERx20_x28_secx29_-sum-x5b_0x0x5d_-function
+    metric: GKER (sec)
+    scope: function
+    formula: $$
+    combine: sum
+  - &GINSx3a_STL_CMEM-sum-x5b_0x0x5d_-execution
+    metric: GINS:STL_CMEM
+    scope: execution
+    formula: $$
+    combine: sum
+  - &GINSx3a_STL_CMEM-sum-x5b_0x0x5d_-lex_aware
+    metric: GINS:STL_CMEM
+    scope: lex_aware
+    formula: $$
+    combine: sum
+  - &GINSx3a_STL_CMEM-sum-x5b_0x0x5d_-function
+    metric: GINS:STL_CMEM
+    scope: function
+    formula: $$
+    combine: sum
+  - &GINSx3a_BLK_LAT-sum-x5b_0x0x5d_-execution
+    metric: GINS:BLK_LAT
+    scope: execution
+    formula: $$
+    combine: sum
+  - &GINSx3a_BLK_LAT-sum-x5b_0x0x5d_-lex_aware
+    metric: GINS:BLK_LAT
+    scope: lex_aware
+    formula: $$
+    combine: sum
+  - &GINSx3a_BLK_LAT-sum-x5b_0x0x5d_-function
+    metric: GINS:BLK_LAT
+    scope: function
+    formula: $$
+    combine: sum
+  - &GMSETx3a_DSTx20_x28_Bx29_-sum-x5b_0x0x5d_-execution
+    metric: GMSET:DST (B)
+    scope: execution
+    formula: $$
+    combine: sum
+  - &GMSETx3a_DSTx20_x28_Bx29_-sum-x5b_0x0x5d_-lex_aware
+    metric: GMSET:DST (B)
+    scope: lex_aware
+    formula: $$
+    combine: sum
+  - &GMSETx3a_DSTx20_x28_Bx29_-sum-x5b_0x0x5d_-function
+    metric: GMSET:DST (B)
+    scope: function
+    formula: $$
+    combine: sum
+  - &GINSx3a_BLK_SIMD_ACT-sum-x5b_0x0x5d_-execution
+    metric: GINS:BLK_SIMD_ACT
+    scope: execution
+    formula: $$
+    combine: sum
+  - &GINSx3a_BLK_SIMD_ACT-sum-x5b_0x0x5d_-lex_aware
+    metric: GINS:BLK_SIMD_ACT
+    scope: lex_aware
+    formula: $$
+    combine: sum
+  - &GINSx3a_BLK_SIMD_ACT-sum-x5b_0x0x5d_-function
+    metric: GINS:BLK_SIMD_ACT
+    scope: function
+    formula: $$
+    combine: sum
+  - &GINS-sum-x5b_0x0x5d_-execution
+    metric: GINS
+    scope: execution
+    formula: $$
+    combine: sum
+  - &GINS-sum-x5b_0x0x5d_-lex_aware
+    metric: GINS
+    scope: lex_aware
+    formula: $$
+    combine: sum
+  - &GINS-sum-x5b_0x0x5d_-function
+    metric: GINS
+    scope: function
+    formula: $$
+    combine: sum
+  - &GINSx3a_STL_PIPE-sum-x5b_0x0x5d_-execution
+    metric: GINS:STL_PIPE
+    scope: execution
+    formula: $$
+    combine: sum
+  - &GINSx3a_STL_PIPE-sum-x5b_0x0x5d_-lex_aware
+    metric: GINS:STL_PIPE
+    scope: lex_aware
+    formula: $$
+    combine: sum
+  - &GINSx3a_STL_PIPE-sum-x5b_0x0x5d_-function
+    metric: GINS:STL_PIPE
+    scope: function
+    formula: $$
+    combine: sum
+  - &GMEMx3a_ARYx20_x28_Bx29_-sum-x5b_0x0x5d_-execution
+    metric: GMEM:ARY (B)
+    scope: execution
+    formula: $$
+    combine: sum
+  - &GMEMx3a_ARYx20_x28_Bx29_-sum-x5b_0x0x5d_-lex_aware
+    metric: GMEM:ARY (B)
+    scope: lex_aware
+    formula: $$
+    combine: sum
+  - &GMEMx3a_ARYx20_x28_Bx29_-sum-x5b_0x0x5d_-function
+    metric: GMEM:ARY (B)
+    scope: function
+    formula: $$
+    combine: sum
+  - &GINSx3a_LAT-sum-x5b_0x0x5d_-execution
+    metric: GINS:LAT
+    scope: execution
+    formula: $$
+    combine: sum
+  - &GINSx3a_LAT-sum-x5b_0x0x5d_-lex_aware
+    metric: GINS:LAT
+    scope: lex_aware
+    formula: $$
+    combine: sum
+  - &GINSx3a_LAT-sum-x5b_0x0x5d_-function
+    metric: GINS:LAT
+    scope: function
+    formula: $$
+    combine: sum
+  - &GPUOPx20_x28_secx29_-sum-x5b_0x0x5d_-execution
+    metric: GPUOP (sec)
+    scope: execution
+    formula: $$
+    combine: sum
+  - &GPUOPx20_x28_secx29_-sum-x5b_0x0x5d_-lex_aware
+    metric: GPUOP (sec)
+    scope: lex_aware
+    formula: $$
+    combine: sum
+  - &GPUOPx20_x28_secx29_-sum-x5b_0x0x5d_-function
+    metric: GPUOP (sec)
     scope: function
     formula: $$
     combine: sum
@@ -1216,6 +1231,17 @@ inputs:
     formula: $$
     combine: sum
 roots:
+  - name: CPUTIME (sec)
+    description: CPUTIME (sec)
+    variants:
+      Sum:
+        render: [number, percent]
+        formula:
+          inclusive:
+            standard: *CPUTIMEx20_x28_secx29_-sum-x5b_0x0x5d_-execution
+          exclusive:
+            custom: *CPUTIMEx20_x28_secx29_-sum-x5b_0x0x5d_-lex_aware
+            standard: *CPUTIMEx20_x28_secx29_-sum-x5b_0x0x5d_-function
   - name: GINS
     description: GPU instruction execution count
     variants:
