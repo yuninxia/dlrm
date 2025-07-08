@@ -548,12 +548,6 @@ def generate_enhanced_recommendations(gf):
             recommendations.append("   - 批量化数据传输")
             recommendations.append("   - 考虑在GPU上保持数据")
     
-    # HPCToolkit 采样建议
-    recommendations.append("🔬 HPCToolkit采样建议:")
-    recommendations.append("   - 添加 LLC_MISSES 采样: -e LLC_MISSES@f400000")
-    recommendations.append("   - 增加采样频率获得更细粒度数据")
-    recommendations.append("   - 考虑添加 DRAM 带宽指标")
-    
     if recommendations:
         for rec in recommendations:
             print(f"  {rec}")
@@ -564,7 +558,7 @@ def main():
     print("="*60)
     
     # 加载数据库
-    gf = load_hpctoolkit_database("hpctoolkit-python3.11-database")
+    gf = load_hpctoolkit_database("hpctoolkit-python3.11-database-cpu")
     if not gf:
         return
     

@@ -1,6 +1,3 @@
-[submodule "workloads/training"]
-	path = workloads/training
-	url = https://github.com/mlcommons/training.git
 [submodule "thirdparty/thicket"]
 	path = thirdparty/thicket
 	url = https://github.com/LLNL/thicket.git
