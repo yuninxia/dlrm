@@ -1,0 +1,70 @@
+{
+  "timestamp": "2025-07-15 01:16:49",
+  "global_metrics": {
+    "cpu_time": 1513.6220930000002,
+    "gpu_time": 3.675497044,
+    "gpu_utilization_pct": 0.2422396943168818,
+    "kernel_time": 0.7947558619999999,
+    "copy_time": 2.8807411820000004,
+    "copy_percentage": 78.37691467342125,
+    "total_stall_cycles": 57157330040.0,
+    "dominant_stall_type": "gmem",
+    "dominant_stall_pct": 54.94896634608442,
+    "total_kernels": 145100.0,
+    "avg_kernel_time_us": 5.477297463818056,
+    "kernel_overhead_pct": 91.2858947871466,
+    "total_transfers": 21685,
+    "avg_transfer_size_kb": 773.0200280651949,
+    "median_transfer_size_kb": 22.411354166666666,
+    "avg_gpu_utilization": 0.5799719155062573,
+    "max_gpu_utilization": 2.741634538606442,
+    "idle_functions": 8748,
+    "active_gpu_functions": 20
+  },
+  "top_functions": [
+    {
+      "name": "entry",
+      "time (inc)": 50.711970000000036
+    },
+    {
+      "name": "is_available",
+      "time (inc)": 28.992898999999994
+    },
+    {
+      "name": "src/home/ynxia/playground/param/.venv/lib/python3.11/site-packages/torch/cuda/__init__.py:129",
+      "time (inc)": 28.992898999999994
+    },
+    {
+      "name": "_cuda_getDeviceCount",
+      "time (inc)": 28.992898999999994
+    },
+    {
+      "name": "/home/ynxia/playground/param/.venv/lib/python3.11/site-packages/torch/lib/libtorch_python.so:14515666",
+      "time (inc)": 28.992898999999994
+    }
+  ],
+  "optimization_recommendations": {
+    "gpu_utilization": {
+      "current": "0.24%",
+      "target": "50%",
+      "potential_speedup": "50.0x",
+      "description": "Optimize CPU-GPU workload balance"
+    },
+    "data_transfer": {
+      "current": "78.4% GPU time on transfers",
+      "target": "31.4% GPU time on transfers",
+      "potential_speedup": "1.9x",
+      "description": "Unified Memory and batch transfer optimization"
+    },
+    "kernel_fusion": {
+      "current": "91.3% time on launch overhead",
+      "target": "18.3% time on launch overhead",
+      "potential_speedup": "3.7x",
+      "description": "Kernel fusion to reduce launch count"
+    },
+    "total_estimate": {
+      "combined_speedup": "351.5x",
+      "description": "Expected performance improvement after combined optimization"
+    }
+  }
+}
